@@ -90,7 +90,6 @@ jobs:
     - name: Build firmware
       working-directory: ./openwrt
       run: |
-        echo -e "$(nproc) thread build."
         make -j1 V=s
         
     - name: Get current date
