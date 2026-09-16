@@ -65,8 +65,8 @@ jobs:
       run: |
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        rm -rf build_dir/hostpkg/libffi-*
-        rm -rf staging_dir/hostpkg/stamp/.libffi*
+        ls feeds/packages/libs/libffi
+        head -40 feeds/packages/libs/libffi/Makefile
         
     #- name: Import external feeds - JerryKuKu Argon
     #  working-directory: ./openwrt
